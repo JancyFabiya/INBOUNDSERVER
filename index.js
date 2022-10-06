@@ -1,9 +1,12 @@
 const express = require('express');
+const dotenv =require('dotenv');
+dotenv.config();
+
 const bodyParser  = require('body-parser');
 // import mongoose from 'mongoose';
-
+const dbconnect =require('./config/connection')
+dbconnect()
 var db=require('./config/connection')
-const dotenv =require('dotenv');
 const cors =require('cors');
 
 
@@ -30,7 +33,6 @@ app.get("/",(req,res)=>{
 
 app.use(bodyParser.json({limit:'30mb',extended: true}))
 app.use(bodyParser.urlencoded({limit:'30mb',extended: true}))
-dotenv.config();
 app.use(cors())
 
 
