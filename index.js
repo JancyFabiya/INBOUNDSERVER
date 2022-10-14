@@ -16,6 +16,13 @@ const MessageRoute = require("./Routes/MessageRoute.js")
 const CommandRoute = require("./Routes/CommandRoute.js")
 const StoryRoute = require("./Routes/StoryRoute.js")         
 
+
+// console.log(db.dbconnect);
+//Mongoose
+// const dataBase =  db.sampletest.find)
+// const data=dataBase.find()
+// console.log(dataBase);
+
 //Routes
 
 const app = express();
