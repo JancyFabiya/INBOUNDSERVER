@@ -24,7 +24,7 @@ const registerUser = async(req,res)=>{
     const newUser = new UserModel(req.body)
     const {username}=req.body
     try {
-        const oldUser = await UserModel.findOne({username})
+        const oldUser = await UserModel.findOne({username:username})
         if(oldUser){
             return res.status(400).json({message:"Username is already registered!"})
         }
